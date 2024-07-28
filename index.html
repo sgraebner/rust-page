@@ -12,102 +12,92 @@
         <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
 
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
-	<style>
-    pre, code {
-      font-family: 'Fira Code', monospace;
-      font-size: 14px;
-      line-height: 1.5;
-    }
-	.intrinsic {max-width: intrinsic;}
-		 
-		.slide-in-bottom{-webkit-animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94) both;animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94) both}
-		.slide-in-bottom-h1{-webkit-animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94) .5s both;animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94) .5s both}
-		.slide-in-bottom-subtitle{-webkit-animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94) .75s both;animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94) .75s both}
-		.fade-in{-webkit-animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) 1s both;animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) 1s both}
-		.bounce-top-icons{-webkit-animation:bounce-top .9s 1s both;animation:bounce-top .9s 1s both}
-		
-		@-webkit-keyframes slide-in-bottom{0%{-webkit-transform:translateY(1000px);transform:translateY(1000px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes slide-in-bottom{0%{-webkit-transform:translateY(1000px);transform:translateY(1000px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}
-		@-webkit-keyframes bounce-top{0%{-webkit-transform:translateY(-45px);transform:translateY(-45px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in;opacity:1}24%{opacity:1}40%{-webkit-transform:translateY(-24px);transform:translateY(-24px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}65%{-webkit-transform:translateY(-12px);transform:translateY(-12px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}82%{-webkit-transform:translateY(-6px);transform:translateY(-6px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}93%{-webkit-transform:translateY(-4px);transform:translateY(-4px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}25%,55%,75%,87%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}100%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out;opacity:1}}@keyframes bounce-top{0%{-webkit-transform:translateY(-45px);transform:translateY(-45px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in;opacity:1}24%{opacity:1}40%{-webkit-transform:translateY(-24px);transform:translateY(-24px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}65%{-webkit-transform:translateY(-12px);transform:translateY(-12px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}82%{-webkit-transform:translateY(-6px);transform:translateY(-6px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}93%{-webkit-transform:translateY(-4px);transform:translateY(-4px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}25%,55%,75%,87%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}100%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out;opacity:1}}
-		@-webkit-keyframes fade-in{0%{opacity:0}100%{opacity:1}}@keyframes fade-in{0%{opacity:0}100%{opacity:1}}
-				
-	</style>
+
 
 </head>
 
 
 <body class="leading-normal tracking-normal text-gray-900" style="font-family: 'Source Sans Pro', sans-serif;">
 
+<div class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
+  <img src="/img/beams.jpg" alt="" class="absolute left-1/2 top-1/2 max-w-none -translate-x-1/2 -translate-y-1/2" width="1308" />
+  <div class="absolute inset-0 bg-[url(/img/grid.svg)] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
+  <div class="relative bg-white px-6 pb-8 pt-10 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10">
+    <div class="mx-auto max-w-md">
+      <img src="https://rust.ju.nu/rustdesk-banner.svg" class="h-12" alt="Tailwind Play" />
+      <div class="divide-y divide-gray-300/50">
+        <div class="space-y-6 py-6 text-base leading-7 text-gray-600">
+          <p>Wir von der <strong>JUNU Marketing Group</strong> freuen uns, Sie als Kunden begrüßen zu dürfen. Mit nur vier einfachen Schritten ist Ihre RustDesk-Verbindung nun erfolgreich konfiguriert:</p>
+          <ul class="space-y-4">
+            <li class="flex items-center">
+              <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="11" />
+                <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+              </svg>
+              <p class="ml-4">
+                Öffnen Sie
+                <code class="text-sm font-bold text-gray-900">Einstellungen -> Netzwerk</code>
+              </p>
+            </li>
+            <li class="flex items-center">
+              <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="11" />
+                <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+              </svg>
+              <p class="ml-4">Klicken Sie auf <code class="text-sm font-bold text-gray-900">Netzwerkeinstellungen entsperren</code></p>
+            </li>
+            <li class="flex flex-row items-center">
+              <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="11" />
+                <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+              </svg>
+              <p class="ml-4">Kopieren Sie den folgenden Code mit einem Klick auf rechte Kopierzeichen.</p>
+            </li>
+            <li>
+              <code class="inline-flex items-center space-x-4 rounded-lg bg-gray-800 p-4 pl-6 text-left text-sm text-white sm:text-base">
+                <span class="flex gap-4">
+                  <span class="shrink-0 text-gray-500"> $ </span>
 
+                  <span class="flex-1">
+                    <span> ==Qfi0DNltGNIplNUBVd65UaqZlRXh... </span>
+                  </span>
+                </span>
 
-<div class="h-screen pb-14 bg-right bg-cover" style="background-image:url('bg.svg');">
-	<div class="w-full container mx-auto p-6">
-			
-		<div class="w-full flex items-center justify-between">
-			<a class="flex items-center text-indigo-400 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"  href="#"> 
-				 <img src="rustdesk-banner.svg" class="w-64 h-full" alt="Rustdesk Logo" />
-			</a>
-			
-		</div>
+                <svg class="h-5 w-5 shrink-0 text-gray-500 transition group-hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path d="M8 2a1 1 0 000 2h2a1 1 0 100-2H8z"></path>
+                  <path d="M3 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v6h-4.586l1.293-1.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L10.414 13H15v3a2 2 0 01-2 2H5a2 2 0 01-2-2V5zM15 11h2a1 1 0 110 2h-2v-2z"></path>
+                </svg>
+              </code>
+            </li>
+            <li class="flex items-center">
+              <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="11" />
+                <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+              </svg>
+              <p class="ml-4">
+                Klicken Sie auf <svg class="flex-inline inline" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h167q11-35 43-57.5t70-22.5q40 0 71.5 22.5T594-840h166q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560h-80v120H280v-120h-80v560Zm280-560q17 0 28.5-11.5T520-800q0-17-11.5-28.5T480-840q-17 0-28.5 11.5T440-800q0 17 11.5 28.5T480-760Z" /></svg> und danach auf <code class="text-sm font-bold text-gray-900">Anwenden</code>
+              </p>
+            </li>
+          </ul>
 
-	</div>
-
-	<div class="container pt-24 md:pt-48 px-6 mx-auto flex flex-wrap flex-col md:flex-row items-center">
-
-		<div class="flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden">
-			<h1 class="my-4 text-2xl md:text-4xl text-purple-800 font-bold leading-tight text-center md:text-left slide-in-bottom-h1">Laden Sie den Rustdesk-Client herunter</h1>
-			<p class="leading-normal text-base md:text-xl mb-8 text-center md:text-left slide-in-bottom-subtitle">Um unseren Fernwartungsservice zu nutzen, laden Sie bitte den Rustdesk-Client herunter und installieren Sie ihn auf Ihrem Gerät. Folgen Sie den nachstehenden Schritten, um den Client herunterzuladen und einzurichten:
-
-</p>
-			<h2>Konfigurationswert</h2>
-			  <div class="relative bg-white rounded-lg p-4 shadow-lg intrinsic">
-      <button id="copyButton" class="absolute top-2 right-2 bg-blue-600 text-white px-2 py-1 rounded hover:bg-blue-700 focus:outline-none">Copy</button>
-      <pre class="bg-gray-100 text-gray-800 p-4 rounded-lg overflow-x-auto border border-gray-300 leading-[0.5rem]" id="codeBlock"><code>==Qfi0DNltGNIplNUBVd65UaqZlRXhHWuR2K4oFdDR3QhVHT09WMXF1M4oGbqZXNiojI5V2aiwiIiojIpBXYiwiIiojI5FGblJnIsISdu5Sdq5CdzVnciojI0N3boJye</code></pre>
+          <p>Die Konfiguration Ihrer RustDesk-Verbindung ist nun abgeschlossen. Wir freuen uns sehr, Sie als Kunden begrüßen zu dürfen und stehen Ihnen jederzeit für weitere Fragen zur Verfügung.</p>
+        </div>
+        <div class="py-3 text-base font-semibold leading-7">
+          <p class="text-gray-900">Sie haben noch kein RustDest?</p>
+          <p>
+            <a href="https://github.com/rustdesk/rustdesk/releases/" class="text-sky-500 hover:text-sky-600">Jetzt herunterladen &rarr;</a>
+          </p>
+        </div>
+        <footer class="py-2">
+          <div class="container mx-auto text-center">
+            <p class="text-sm">&copy; 2024 JUNU Marketing Group LTD. All rights reserved.</p>
+          </div>
+        </footer>
+      </div>
     </div>
   </div>
-		
-			<p class="text-blue-400 font-bold pb-8 lg:pb-6 text-center md:text-left fade-in">Wählen Sie ihr Betriebssystem:</p>
-			<div class="flex w-full justify-center md:justify-start pb-24 lg:pb-0 fade-in">
-				<a href="#"><img src="App Store.svg" class="h-12 pr-4 bounce-top-icons"></a>
-				<img src="Play Store.svg" class="h-12 bounce-top-icons">
-			</div>
-
-		</div>
-		
-		<div class="w-full xl:w-3/5 py-6 overflow-y-hidden">
-			<img class="w-5/6 mx-auto lg:mr-0 slide-in-bottom" src="devices.svg">
-		</div>
-		
-		<div class="w-full pt-16 pb-6 text-sm text-center md:text-left fade-in">
-			<a class="text-gray-500 no-underline hover:no-underline" href="https://ju.nu">&copy; JUNU Marketing Group LTD 2024</a>
-		</div>
-		
-	</div>
-	
-
 </div>
-<div id="copyModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
-    <div class="bg-white rounded-lg p-4 shadow-lg">
-      <p class="text-gray-800">Code copied to clipboard!</p>
-      <button id="closeModal" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 focus:outline-none">Close</button>
-    </div>
-  </div>
 
-  <script>
-    document.getElementById('copyButton').addEventListener('click', () => {
-      const code = document.getElementById('codeBlock').innerText;
-      navigator.clipboard.writeText(code).then(() => {
-        const modal = document.getElementById('copyModal');
-        modal.classList.remove('hidden');
-      }).catch(err => {
-        console.error('Failed to copy: ', err);
-      });
-    });
-
-    document.getElementById('closeModal').addEventListener('click', () => {
-      const modal = document.getElementById('copyModal');
-      modal.classList.add('hidden');
-    });
-  </script>
 </body>
 
 </html>
