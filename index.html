@@ -12,8 +12,21 @@
         <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
 
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
-
-	<style>		
+	<style>
+    /* Custom scrollbar for the code block */
+    pre::-webkit-scrollbar {
+      height: 8px;
+    }
+    pre::-webkit-scrollbar-thumb {
+      background: #4A5568; /* Tailwind's gray-700 */
+      border-radius: 4px;
+    }
+    /* Classic code style */
+    pre, code {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 14px;
+    }
+	
 		 
 		.slide-in-bottom{-webkit-animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94) both;animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94) both}
 		.slide-in-bottom-h1{-webkit-animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94) .5s both;animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94) .5s both}
@@ -54,14 +67,15 @@
 
 </p>
 			<h2>Konfigurationswert</h2>
-			    <div class="relative bg-gray-200 rounded-lg p-4">
-      <button id="copyButton" class="absolute top-2 right-2 bg-blue-500 text-white px-2 py-1 rounded hover:bg-blue-700">Copy</button>
-      <pre class="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto" id="codeBlock">
+			    <div class="relative bg-gray-100 rounded-lg p-4 shadow-lg">
+      <button id="copyButton" class="absolute top-2 right-2 bg-blue-600 text-white px-2 py-1 rounded hover:bg-blue-700">Copy</button>
+      <pre class="bg-black text-green-500 p-4 rounded-lg overflow-x-auto" id="codeBlock">
 <code>
-Random code content goes here...
-line 1
-line 2
-line 3
+# Classic Code Example
+print("Hello, World!")
+def greet(name):
+    return f"Hello, {name}!"
+print(greet("Alice"))
 </code>
       </pre>
     </div>
