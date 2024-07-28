@@ -13,18 +13,10 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
 	<style>
-    /* Custom scrollbar for the code block */
-    pre::-webkit-scrollbar {
-      height: 8px;
-    }
-    pre::-webkit-scrollbar-thumb {
-      background: #4A5568; /* Tailwind's gray-700 */
-      border-radius: 4px;
-    }
-    /* Classic code style */
     pre, code {
-      font-family: 'Courier New', Courier, monospace;
+      font-family: 'Fira Code', monospace;
       font-size: 14px;
+      line-height: 1.5;
     }
 	
 		 
@@ -67,19 +59,20 @@
 
 </p>
 			<h2>Konfigurationswert</h2>
-			    <div class="relative bg-gray-100 rounded-lg p-4 shadow-lg">
-      <button id="copyButton" class="absolute top-2 right-2 bg-blue-600 text-white px-2 py-1 rounded hover:bg-blue-700">Copy</button>
-      <pre class="bg-black text-green-500 p-4 rounded-lg overflow-x-auto" id="codeBlock">
+			  <div class="relative bg-white rounded-lg p-4 shadow-lg">
+      <button id="copyButton" class="absolute top-2 right-2 bg-blue-600 text-white px-2 py-1 rounded hover:bg-blue-700 focus:outline-none">Copy</button>
+      <pre class="bg-gray-100 text-gray-800 p-4 rounded-lg overflow-x-auto border border-gray-300" id="codeBlock">
 <code>
-# Classic Code Example
-print("Hello, World!")
+# Example Python Code
 def greet(name):
     return f"Hello, {name}!"
-print(greet("Alice"))
+
+if __name__ == "__main__":
+    print(greet("Alice"))
 </code>
       </pre>
     </div>
-			
+  </div>
 		
 			<p class="text-blue-400 font-bold pb-8 lg:pb-6 text-center md:text-left fade-in">Wählen Sie ihr Betriebssystem:</p>
 			<div class="flex w-full justify-center md:justify-start pb-24 lg:pb-0 fade-in">
