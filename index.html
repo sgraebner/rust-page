@@ -85,14 +85,27 @@
 	
 
 </div>
-<script>
+<div id="copyModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white rounded-lg p-4 shadow-lg">
+      <p class="text-gray-800">Code copied to clipboard!</p>
+      <button id="closeModal" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 focus:outline-none">Close</button>
+    </div>
+  </div>
+
+  <script>
     document.getElementById('copyButton').addEventListener('click', () => {
       const code = document.getElementById('codeBlock').innerText;
       navigator.clipboard.writeText(code).then(() => {
-        alert('Kopiert');
+        const modal = document.getElementById('copyModal');
+        modal.classList.remove('hidden');
       }).catch(err => {
         console.error('Failed to copy: ', err);
       });
+    });
+
+    document.getElementById('closeModal').addEventListener('click', () => {
+      const modal = document.getElementById('copyModal');
+      modal.classList.add('hidden');
     });
   </script>
 </body>
