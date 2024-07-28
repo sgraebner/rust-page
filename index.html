@@ -1,118 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>RustDesk Client</title>
-	<meta name="description" content="">
-	<meta name="keywords" content="">
-	
-        <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
-
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
-
-
-</head>
-
-
-<body>
-<div class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
-  <img src="https://play.tailwindcss.com/img/beams.jpg" alt="" class="absolute left-1/2 top-1/2 max-w-none -translate-x-1/2 -translate-y-1/2" width="1308" />
-  <div class="relative bg-white px-6 pb-8 pt-10 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10">
-    <div class="mx-auto max-w-md">
-      <img src="https://rust.ju.nu/rustdesk-banner.svg" class="h-12" alt="Tailwind Play" />
-      <div class="divide-y divide-gray-300/50">
-        <div class="space-y-6 py-6 text-base leading-7 text-gray-600">
-          <p>Wir von der <strong>JUNU Marketing Group</strong> freuen uns, Sie als Kunden begrüßen zu dürfen. Mit nur vier einfachen Schritten ist Ihre RustDesk-Verbindung nun erfolgreich konfiguriert:</p>
-          <ul class="space-y-4">
-            <li class="flex items-center">
-              <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="11" />
-                <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
-              </svg>
-              <p class="ml-4">
-                Öffnen Sie
-                <code class="text-sm font-bold text-gray-900">Einstellungen -> Netzwerk</code>
-              </p>
-            </li>
-            <li class="flex items-center">
-              <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="11" />
-                <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
-              </svg>
-              <p class="ml-4">Klicken Sie auf <code class="text-sm font-bold text-gray-900">Netzwerkeinstellungen entsperren</code></p>
-            </li>
-            <li class="flex flex-row items-center">
-              <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="11" />
-                <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
-              </svg>
-              <p class="ml-4">Kopieren Sie den folgenden Code mit einem Klick auf rechte Kopierzeichen.</p>
-            </li>
-            <li>
-              <code class="inline-flex items-center space-x-4 rounded-lg bg-gray-800 p-4 pl-6 text-left text-sm text-white sm:text-base">
-                <span class="flex gap-4">
-                  <span class="shrink-0 text-gray-500"> $ </span>
-
-                  <span class="flex-1">
-                    <span> ==Qfi0DNltGNIplNUBVd65UaqZlRXh... </span>
-                  </span>
-                </span>
-
-                <svg id="copyButton" class="h-5 w-5 shrink-0 text-gray-500 transition group-hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path d="M8 2a1 1 0 000 2h2a1 1 0 100-2H8z"></path>
-                  <path d="M3 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v6h-4.586l1.293-1.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L10.414 13H15v3a2 2 0 01-2 2H5a2 2 0 01-2-2V5zM15 11h2a1 1 0 110 2h-2v-2z"></path>
-                </svg>
-              </code>
-            </li>
-            <li class="flex items-center">
-              <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="11" />
-                <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
-              </svg>
-              <p class="ml-4">
-                Klicken Sie auf <svg class="flex-inline inline" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h167q11-35 43-57.5t70-22.5q40 0 71.5 22.5T594-840h166q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560h-80v120H280v-120h-80v560Zm280-560q17 0 28.5-11.5T520-800q0-17-11.5-28.5T480-840q-17 0-28.5 11.5T440-800q0 17 11.5 28.5T480-760Z" /></svg> und danach auf <code class="text-sm font-bold text-gray-900">Anwenden</code>
-              </p>
-            </li>
-          </ul>
-
-          <p>Die Konfiguration Ihrer RustDesk-Verbindung ist nun abgeschlossen. Wir freuen uns sehr, Sie als Kunden begrüßen zu dürfen und stehen Ihnen jederzeit für weitere Fragen zur Verfügung.</p>
-        </div>
-        <div class="py-3 text-base font-semibold leading-7">
-          <p class="text-gray-900">Sie haben noch kein RustDest?</p>
-          <p>
-            <a href="https://github.com/rustdesk/rustdesk/releases/" class="text-sky-500 hover:text-sky-600">Jetzt herunterladen &rarr;</a>
-          </p>
-        </div>
-        <footer class="py-2">
-          <div class="container mx-auto text-center">
-            <a href="https://ju.nu" target="_blank" class="text-sm">&copy; 2024 JUNU Marketing Group LTD. All rights reserved.</p>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>RustDesk Client</title>
+  </head>
+  <body>
+    <div class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12"><img src="https://play.tailwindcss.com/img/beams.jpg" alt="" class="absolute left-1/2 top-1/2 max-w-none -translate-x-1/2 -translate-y-1/2" width="1308" />
+      <div class="relative bg-white px-6 pb-8 pt-10 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10">
+        <div class="mx-auto max-w-md"><img src="https://rust.ju.nu/rustdesk-banner.svg" class="h-12" alt="Tailwind Play" />
+          <div class="divide-y divide-gray-300/50">
+            <div class="space-y-6 py-6 text-base leading-7 text-gray-600">
+              <p>Wir von der <strong>JUNU Marketing Group</strong> freuen uns, Sie als Kunden begrüßen zu dürfen. Mit nur vier einfachen Schritten ist Ihre RustDesk-Verbindung nun erfolgreich konfiguriert:</p>
+              <ul class="space-y-4">
+                <li class="flex items-center"><svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="11" />
+                    <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                  </svg>
+                  <p class="ml-4"> Öffnen Sie <code class="text-sm font-bold text-gray-900">Einstellungen -> Netzwerk</code></p>
+                </li>
+                <li class="flex items-center"><svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="11" />
+                    <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                  </svg>
+                  <p class="ml-4">Klicken Sie auf <code class="text-sm font-bold text-gray-900">Netzwerkeinstellungen entsperren</code></p>
+                </li>
+                <li class="flex flex-row items-center"><svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="11" />
+                    <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                  </svg>
+                  <p class="ml-4">Kopieren Sie den folgenden Code mit einem Klick auf rechte Kopierzeichen.</p>
+                </li>
+                <li><code class="inline-flex items-center space-x-4 rounded-lg bg-gray-800 p-4 pl-6 text-left text-sm text-white sm:text-base"><span class="flex gap-4"><span class="shrink-0 text-gray-500"> $ </span><span class="flex-1"><span> ==Qfi0DNltGNIplNUBVd65UaqZlRXh... </span></span></span><svg id="copyButton" class="h-5 w-5 shrink-0 text-gray-500 transition group-hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path d="M8 2a1 1 0 000 2h2a1 1 0 100-2H8z"></path>
+                      <path d="M3 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v6h-4.586l1.293-1.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L10.414 13H15v3a2 2 0 01-2 2H5a2 2 0 01-2-2V5zM15 11h2a1 1 0 110 2h-2v-2z"></path>
+                    </svg></code></li>
+                <li class="flex items-center"><svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="11" />
+                    <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+                  </svg>
+                  <p class="ml-4"> Klicken Sie auf <svg class="flex-inline inline" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                      <path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h167q11-35 43-57.5t70-22.5q40 0 71.5 22.5T594-840h166q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560h-80v120H280v-120h-80v560Zm280-560q17 0 28.5-11.5T520-800q0-17-11.5-28.5T480-840q-17 0-28.5 11.5T440-800q0 17 11.5 28.5T480-760Z" />
+                    </svg> und danach auf <code class="text-sm font-bold text-gray-900">Anwenden</code></p>
+                </li>
+              </ul>
+              <p>Die Konfiguration Ihrer RustDesk-Verbindung ist nun abgeschlossen. Wir freuen uns sehr, Sie als Kunden begrüßen zu dürfen und stehen Ihnen jederzeit für weitere Fragen zur Verfügung.</p>
+            </div>
+            <div class="py-3 text-base font-semibold leading-7">
+              <p class="text-gray-900">Sie haben noch kein RustDest?</p>
+              <p><a href="https://github.com/rustdesk/rustdesk/releases/" class="text-sky-500 hover:text-sky-600">Jetzt herunterladen &rarr;</a></p>
+            </div>
+            <footer class="py-2">
+              <div class="container mx-auto text-center"><a href="https://ju.nu" target="_blank" class="text-sm">&copy; 2024 JUNU Marketing Group LTD. All rights reserved.</p>
+              </div>
+            </footer>
           </div>
-        </footer>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-  <div id="notification" class="fixed top-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-4 py-2 rounded hidden">
-    Code in die Zwischenablage gespeichert!
-  </div>
-
-  <script>
-    document.getElementById('copyButton').addEventListener('click', () => {
-      const textToCopy = "==Qfi0DNltGNIplNUBVd65UaqZlRXhHWuR2K4oFdDR3QhVHT09WMXF1M4oGbqZXNiojI5V2aiwiIiojIpBXYiwiIiojI5FGblJnIsISdu5Sdq5CdzVnciojI0N3boJye";
-      navigator.clipboard.writeText(textToCopy).then(() => {
-        const notification = document.getElementById('notification');
-        notification.classList.remove('hidden');
-        setTimeout(() => {
-          notification.classList.add('hidden');
-        }, 2000);
-      }).catch(err => {
-        console.error('Failed to copy: ', err);
+    <div id="notification" class="fixed top-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-4 py-2 rounded hidden"> Code in die Zwischenablage gespeichert! </div>
+    <script>
+      document.getElementById('copyButton').addEventListener('click', () => {
+        const textToCopy = "==Qfi0DNltGNIplNUBVd65UaqZlRXhHWuR2K4oFdDR3QhVHT09WMXF1M4oGbqZXNiojI5V2aiwiIiojIpBXYiwiIiojI5FGblJnIsISdu5Sdq5CdzVnciojI0N3boJye";
+        navigator.clipboard.writeText(textToCopy).then(() => {
+          const notification = document.getElementById('notification');
+          notification.classList.remove('hidden');
+          setTimeout(() => {
+            notification.classList.add('hidden');
+          }, 2000);
+        }).catch(err => {
+          console.error('Failed to copy: ', err);
+        });
       });
-    });
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>
